@@ -40,7 +40,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 50px;
+    padding: 10px 25px;
     backdrop-filter: blur(2px);
 }
 
@@ -244,7 +244,7 @@ input {
 
 .about article .backlines img:nth-child(2) {
     position: relative;
-    left: 220px;
+    left: 200px;
     top: -100px;
 }
 
@@ -252,7 +252,7 @@ input {
     position: relative;
     height: 40px;
     top: -300px;
-    left: 320px;
+    left: 305px;
 }
 
 .about article .backlines img:nth-child(4) {
@@ -676,10 +676,11 @@ input {
 
 .reviews .r1 {
     display: flex;
-    height: 170px;
+    min-height: 170px;
     gap: 10px;
     border: 2px solid red;
-    clip-path: polygon(0% 0%, 100% 0, 100% 65%, 75% 100%, 0% 100%);
+    border-bottom-right-radius: 50%;
+    /* clip-path: polygon(0% 0%, 100% 0, 100% 65%, 75% 100%, 0% 100%); */
 }
 
 .reviews img {
@@ -699,6 +700,7 @@ input {
 
 .review .r2 {
     border: 2px solid blue;
+    border-bottom-right-radius: 50%;
 }
 
 .review .r3 {
@@ -761,9 +763,10 @@ input {
     gap: 10px;
 }
 
+
 /*------------Media Quary ------------*/
 
-/* Nav bar */
+/********************** Nav bar ********************/
 
 @media only screen and (min-width:300px) and (max-width:770px) {
     nav .menu {
@@ -791,25 +794,43 @@ input {
         display: none;
     }
 }
-@media only screen and (min-width:375px) and (max-width:450px) {
+@media only screen and (min-width:375px) and (max-width:500px) {
     nav {
-        gap:200px;
+        gap:180px;
+    }
+}
+@media only screen and (min-width:501px) and (max-width:700px) {
+    nav {
+        gap:250px;
     }
 }
 @media only screen and (min-width:300px) and (max-width:375px) {
     nav {
-        gap:120px;
+        gap:185px;
         padding-left: 5px;
     }
 }
+@media only screen and (min-width:300px) and (max-width:350px) {
+    nav {
+        gap:140px;
+        padding-left: 5px;
+    }
+}
+
+
+/****************** Home ***************************/
+
 
 @media only screen and (min-width:300px) and (max-width:770px) {
     .home {
         flex-direction: column;
         justify-content: center;
-        background-position-x: -370px;
-        background-position-y: 15px;
+        background-position-x: -300px;
+        background-position-y: 1px;
         padding: 0px 0px 10px 0px;
+        background-blend-mode: multiply;
+    background-color: rgb(0, 0, 14,0.5);
+        
     }
 
     .home .content {
@@ -822,7 +843,11 @@ input {
         margin-top: 2%;
     }
 }
-
+@media only screen and (min-width:300px) and (max-width:380px) {
+    .home {
+        background-position-x: -10px;
+    }
+}
 @media only screen and (min-width:300px) and (max-width:500px) {
     .home .list {
         display: none;
@@ -1064,5 +1089,8 @@ input {
 
     .review .r1 {
         height: 150px;
+    }
+    .review .lef{
+        gap:0px;
     }
 }
